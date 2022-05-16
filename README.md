@@ -9,4 +9,10 @@ Animated headset
 ----------------
 /Models/headset
 
-Animated headset with cord, that swings with pilot acceleration forces.
+Animated headset with a cord, that swings with pilot acceleration forces. The headset is expected to be hung up at the cockpit ceiling of the aircraft model.
+
+Helionix avionics suite
+----------------
+/Models/instruments/EUcopter-mfd-c
+
+Airbus helicopters Helionix avionics suite, implemented in the Canvas framework. MFD bezel 3D model is included. Up to four screens are supported by the code.
