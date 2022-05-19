@@ -16,3 +16,9 @@ Helionix avionics suite
 /Models/instruments/EUcopter-mfd-c
 
 Airbus helicopters Helionix avionics suite, implemented in the Canvas framework. MFD bezel 3D model is included. Up to four screens are supported by the code.
+
+Helicopter main rotor
+----------------
+/Models/mainrotor
+
+Fully animated helicopters main rotor 
