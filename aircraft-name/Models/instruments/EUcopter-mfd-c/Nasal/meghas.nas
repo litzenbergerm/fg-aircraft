@@ -6,7 +6,9 @@
 
 # This is a generic approach to canvas MFD's
 
-var HELIONIXPATH = "Aircraft/ec145/Models/instruments/EUcopter-mfd-c/";
+# aircraft-name must be replaced by correct path
+
+var HELIONIXPATH = "Aircraft/aircraft-name/Models/instruments/EUcopter-mfd-c/";
 
 io.include(HELIONIXPATH ~ "Nasal/common.nas");
 io.include(HELIONIXPATH ~ "Nasal/meghas_mfd_control.nas");
