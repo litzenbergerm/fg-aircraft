@@ -19,7 +19,7 @@ Airbus helicopters Helionix (for H145 model) and Meghas (for EC145) avionics sui
 
 The mfd0.xml, mfd1.xml, .. model files must be included in your aircraft model xml files.
 
-The Nasal code either helionix.nas or meghas.nas must be included in your aircraft *-set.xml file under the ```<nasal>``` section, in the <helionix> namespace. 
+The Nasal code either helionix.nas or meghas.nas must be included in your aircraft *-set.xml file under the ```<nasal>``` section, in the ```<helionix>``` namespace. 
 
 ```
 <nasal>
@@ -66,21 +66,25 @@ The instruments settings must be defined in your in your aircraft *-set.xml file
               <supply>/systems/electrical/outputs/stbyhor</supply>
             </mfd>  
     </instrumentation>
-
 ```
-
   
 Garmin G5-like avionics suite
 ----------------
 /Models/instruments/g5-mfd
 
-G5 like avionics suite, implemented in the Canvas framework. MFD bezel 3D model is included.
+G5-like avionics suite, implemented in the Canvas framework. MFD bezel 3D model is included.
 
 The mfd0.xml, mfd1.xml, .. model files must be included in your aircraft model xml files.
 
-The Nasal code either mfd-main.nas must be included in your aircraft -set.xml file under the <nasal> section, in the <helionix> namespace. 
- 
+The Nasal code either mfd-main.nas must be included in your aircraft -set.xml file under the ```<nasal>``` section, in the ```<helionix>``` namespace, see above. 
 
+The instruments settings must be defined in your in your aircraft *-set.xml file, for all 4 possible MFD screens, see above.
+ 
+High-res, fully vectorized analog altimeter and vsi gauges
+----------------
+
+Very high resolution gauge 3D models for an altimeter and a vertical speed indicator without the use of textures. All text elements were integrated into the 3D model from SVG vectorized text layers. 
+ 
 Helicopter main rotor
 ----------------
 /Models/mainrotor
