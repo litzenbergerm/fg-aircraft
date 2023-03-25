@@ -19,7 +19,7 @@ Airbus helicopters Helionix (for H145 model) and Meghas (for EC145) avionics sui
 
 The mfd0.xml, mfd1.xml, .. model files must be included in your aircraft model xml files.
 
-The Nasal code either helionix.nas or meghas.nas must be included in your aircraft *-set.xml file under the <nasal> section, in the <helionix> namespace. 
+The Nasal code either helionix.nas or meghas.nas must be included in your aircraft *-set.xml file under the ```<nasal>``` section, in the <helionix> namespace. 
 
 ```
 <nasal>
