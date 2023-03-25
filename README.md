@@ -21,15 +21,54 @@ The mfd0.xml, mfd1.xml, .. model files must be included in your aircraft model x
 
 The Nasal code either helionix.nas or meghas.nas must be included in your aircraft *-set.xml file under the <nasal> section, in the <helionix> namespace. 
 
+```
 <nasal>
   <helionix>
       <file>Aircraft/aircraft-name/Models/instruments/EUcopter-mfd-c/Nasal/helionix.nas</file> 
   </helionix>
   ...
 </nasal>
+```
 
+The instruments settings must be defined in your in your aircraft *-set.xml file, for all 4 possible MFD screens, as :
 
-    
+```
+    <instrumentation>
+            <mfd n="0">
+              <mode-list type="string">init,fnd</mode-list>
+              <nav-source type="string">NAV1</nav-source>
+              <bearing-source type="string" n="0">NAV1</bearing-source>
+              <bearing-source type="string" n="1">ADF1</bearing-source>
+              <pwr-sw-pos type="bool">1</pwr-sw-pos> <!--initial position of the screens power switch-->
+              <supply>/systems/electrical/outputs/avio[1]</supply>
+            </mfd>  
+            <mfd n="1">
+              <!-- add 'dmap' to mode-list for FG1000 digital map mode -->
+              <mode-list type="string">init,vmd,navd,dmap</mode-list>
+              <nav-source type="string">NAV2</nav-source>
+              <bearing-source type="string" n="0">NAV1</bearing-source>
+              <bearing-source type="string" n="1">ADF1</bearing-source>
+              <pwr-sw-pos type="bool">1</pwr-sw-pos> <!--initial position of the screens power switch-->
+              <supply>/systems/electrical/outputs/avio[0]</supply>
+              <dmap-zoom-level>10</dmap-zoom-level>
+            </mfd>  
+            <mfd n="2">
+              <mode-list type="string">init,fnd,dmap,efb</mode-list>
+              <nav-source type="string">NAV2</nav-source>
+              <bearing-source type="string" n="0">NAV2</bearing-source>
+              <bearing-source type="string" n="1">ADF1</bearing-source>
+              <pwr-sw-pos type="bool">1</pwr-sw-pos> <!--initial position of the screens power switch-->
+              <supply>/systems/electrical/outputs/avio[1]</supply>
+            </mfd>  
+            <mfd n="3">
+              <mode-list type="string">stbyai</mode-list>
+              <pwr-sw-pos type="bool">1</pwr-sw-pos> <!--initial position of the screens power switch-->
+              <supply>/systems/electrical/outputs/stbyhor</supply>
+            </mfd>  
+    </instrumentation>
+
+```
+
   
 Garmin G5-like avionics suite
 ----------------
